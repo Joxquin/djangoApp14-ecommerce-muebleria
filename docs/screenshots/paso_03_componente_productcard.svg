@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="636" viewBox="0 0 900 636">
+      <defs>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#221a15" flood-opacity="0.12"/>
+        </filter>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffdcc3"/>
+          <stop offset="100%" stop-color="#fedcc6"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Base Canvas Background -->
+      <rect width="100%" height="100%" fill="#fff8f5" rx="28"/>
+
+      <!-- Window Container Card (M3 Expressive) -->
+      <g filter="url(#shadow)">
+        <rect x="25" y="25" width="850" height="586" rx="24" fill="#ffffff" stroke="#f1e5df" stroke-width="1.5"/>
+        
+        <!-- Window Top Bar -->
+        <rect x="25" y="25" width="850" height="58" rx="24" fill="url(#headerGrad)"/>
+        <rect x="25" y="60" width="850" height="23" fill="url(#headerGrad)"/>
+        
+        <!-- Window Dots -->
+        <circle cx="55" cy="54" r="6.5" fill="#ba1a1a"/>
+        <circle cx="75" cy="54" r="6.5" fill="#f59e0b"/>
+        <circle cx="95" cy="54" r="6.5" fill="#10b981"/>
+
+        <!-- Title & Path -->
+        <text x="125" y="58" fill="#301400" font-family="system-ui, sans-serif" font-weight="700" font-size="14">Ejercicio 03 - Componente ProductCard M3 Expressive</text>
+        <text x="460" y="58" fill="#745845" font-family="monospace" font-size="12">frontend/src/components/ProductCard.jsx</text>
+
+        <!-- Badge -->
+        <rect x="730" y="41" width="125" height="26" rx="13" fill="#944b00"/>
+        <text x="792" y="58" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">ReactJS UI</text>
+      </g>
+
+      <!-- Code Line Output -->
+      <text x="45" y="100">
+        <tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 1</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">export function ProductCard({ nombre, descripcion, precio, imagen, categoria_nombre, cantidad_disponible }) {</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 2</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  const isAvailable = cantidad_disponible &gt; 0;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 3</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  return (</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 4</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    &lt;Card className=&quot;rounded-[28px] overflow-hidden hover:shadow-2xl transition-all&quot;&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 5</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">      &lt;div className=&quot;relative aspect-[4/3] bg-[#f7ebe4]&quot;&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 6</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;img src={imagen} alt={nombre} className=&quot;object-cover w-full h-full&quot; /&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 7</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;Badge className=&quot;absolute top-4 left-4 bg-white/90 text-[#301400]&quot;&gt;{categoria_nombre}&lt;/Badge&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 8</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;Badge className=&quot;absolute top-4 right-4 bg-emerald-100 text-emerald-900&quot;&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 9</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">          {cantidad_disponible} en stock</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">10</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;/Badge&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">11</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">      &lt;/div&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">12</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">      &lt;CardContent className=&quot;p-6&quot;&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">13</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;h3 className=&quot;font-serif text-xl font-bold text-[#221a15]&quot;&gt;{nombre}&lt;/h3&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">14</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;p className=&quot;text-sm text-[#52443d] line-clamp-2&quot;&gt;{descripcion}&lt;/p&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">15</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;div className=&quot;pt-4 flex justify-between items-center border-t border-[#f1e5df]&quot;&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">16</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">          &lt;span className=&quot;text-2xl font-black text-[#221a15]&quot;&gt;{formatPrice(precio)}&lt;/span&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">17</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">          &lt;Button variant=&quot;filled&quot; disabled={!isAvailable}&gt;Adquirir&lt;/Button&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">18</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        &lt;/div&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">19</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">      &lt;/CardContent&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">20</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    &lt;/Card&gt;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">21</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  );</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">22</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">}</tspan>
+      </text>
+    </svg>

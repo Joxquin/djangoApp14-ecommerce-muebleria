@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#221a15" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fedcc6"/>
+      <stop offset="50%" stop-color="#f7ebe4"/>
+      <stop offset="100%" stop-color="#e3e7af" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fff8f5"/>
+
+  <!-- Top App Bar / Header -->
+  <rect width="1200" height="75" fill="#fff8f5" stroke="#f1e5df" stroke-width="1"/>
+  <rect x="50" y="16" width="44" height="44" rx="14" fill="#ffdcc3"/>
+  <circle cx="72" cy="38" r="10" fill="#944b00"/>
+  <text x="105" y="38" font-family="serif" font-weight="700" font-size="20" fill="#221a15">Koa &amp; Madera</text>
+  <text x="105" y="52" font-family="sans-serif" font-weight="600" font-size="9" fill="#745845" letter-spacing="1">MOBILIARIO DE AUTOR</text>
+
+  <!-- Navigation items -->
+  <rect x="440" y="24" width="85" height="28" rx="14" fill="#ffdcc3"/>
+  <text x="482" y="42" font-family="sans-serif" font-weight="700" font-size="12" fill="#944b00" text-anchor="middle">Catálogo</text>
+  <text x="560" y="42" font-family="sans-serif" font-weight="500" font-size="12" fill="#52443d">Colecciones</text>
+  <text x="660" y="42" font-family="sans-serif" font-weight="500" font-size="12" fill="#52443d">Sostenibilidad</text>
+  <text x="765" y="42" font-family="sans-serif" font-weight="500" font-size="12" fill="#52443d">Nosotros</text>
+
+  <!-- Right Actions -->
+  <rect x="990" y="22" width="100" height="32" rx="16" fill="#f1e5df"/>
+  <text x="1040" y="42" font-family="sans-serif" font-weight="600" font-size="11" fill="#745845" text-anchor="middle">9 diseños</text>
+  <circle cx="1115" cy="38" r="18" fill="#944b00"/>
+  <text x="1115" y="43" font-family="sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">M</text>
+
+  <!-- Hero Section -->
+  <g transform="translate(50, 95)">
+    <rect width="1100" height="220" rx="36" fill="url(#heroGradient)" stroke="#f1e5df"/>
+    <rect x="40" y="30" width="160" height="24" rx="12" fill="#ffffff" fill-opacity="0.85"/>
+    <text x="120" y="46" font-family="sans-serif" font-weight="700" font-size="10" fill="#944b00" text-anchor="middle">COLECCIÓN PRIMAVERA 2026</text>
+    <text x="40" y="95" font-family="serif" font-weight="800" font-size="34" fill="#221a15">Muebles que transforman tus espacios en hogar.</text>
+    <text x="40" y="130" font-family="sans-serif" font-size="14" fill="#52443d">Diseño contemporáneo con madera noble sostenible, uniones orgánicas y acabados de autor.</text>
+    <text x="40" y="175" font-family="sans-serif" font-weight="600" font-size="12" fill="#745845">⚡ Despacho seguro  •  🛡️ Garantía 5 años  •  🌱 Madera Certificada FSC</text>
+  </g>
+
+  <!-- Filter Chips (Material 3 Expressive) -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="160" height="38" rx="19" fill="#944b00" filter="url(#cardShadow)"/>
+    <text x="80" y="24" font-family="sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Todos los Muebles (9)</text>
+
+    <rect x="175" y="0" width="130" height="38" rx="19" fill="#ffffff" stroke="#d7c3b9"/>
+    <text x="240" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#52443d" text-anchor="middle">Salas y Sofás (3)</text>
+
+    <rect x="320" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="#d7c3b9"/>
+    <text x="380" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#52443d" text-anchor="middle">Comedores (2)</text>
+
+    <rect x="455" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="#d7c3b9"/>
+    <text x="515" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#52443d" text-anchor="middle">Dormitorio (2)</text>
+
+    <rect x="590" y="0" width="170" height="38" rx="19" fill="#ffffff" stroke="#d7c3b9"/>
+    <text x="675" y="24" font-family="sans-serif" font-weight="600" font-size="12" fill="#52443d" text-anchor="middle">Estudio &amp; Home Office (2)</text>
+  </g>
+
+  <!-- Product Cards Grid (3 cards) -->
+  <!-- Card 1 -->
+  <g transform="translate(50, 400)" filter="url(#cardShadow)">
+    <rect width="345" height="400" rx="28" fill="#ffffff" stroke="#f1e5df"/>
+    <rect width="345" height="210" rx="28" fill="#fedcc6"/>
+    <rect x="15" y="15" width="90" height="24" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="60" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#301400" text-anchor="middle">Salas y Sofás</text>
+    <rect x="235" y="15" width="95" height="24" rx="12" fill="#d1fae5"/>
+    <text x="282" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#065f46" text-anchor="middle">✓ 4 en stock</text>
+    
+    <text x="24" y="250" font-family="serif" font-weight="700" font-size="18" fill="#221a15">Sofá Modular Nube Terracota</text>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" fill="#52443d">Estructura oculta de roble con lino texturizado premium...</text>
+    
+    <line x1="24" y1="330" x2="321" y2="330" stroke="#f1e5df" stroke-width="1"/>
+    <text x="24" y="352" font-family="sans-serif" font-weight="600" font-size="10" fill="#745845">INVERSIÓN</text>
+    <text x="24" y="375" font-family="sans-serif" font-weight="900" font-size="20" fill="#221a15">S/. 2,850.00</text>
+    
+    <rect x="225" y="345" width="96" height="36" rx="18" fill="#944b00"/>
+    <text x="273" y="367" font-family="sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Adquirir</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(425, 400)" filter="url(#cardShadow)">
+    <rect width="345" height="400" rx="28" fill="#ffffff" stroke="#f1e5df"/>
+    <rect width="345" height="210" rx="28" fill="#ffdcc3"/>
+    <rect x="15" y="15" width="80" height="24" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="55" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#301400" text-anchor="middle">Comedores</text>
+    <rect x="235" y="15" width="95" height="24" rx="12" fill="#d1fae5"/>
+    <text x="282" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#065f46" text-anchor="middle">✓ 5 en stock</text>
+    
+    <text x="24" y="250" font-family="serif" font-weight="700" font-size="18" fill="#221a15">Mesa Roble Nórdica 6P</text>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" fill="#52443d">Mesa extensible construida en roble blanco europeo macizo...</text>
+    
+    <line x1="24" y1="330" x2="321" y2="330" stroke="#f1e5df" stroke-width="1"/>
+    <text x="24" y="352" font-family="sans-serif" font-weight="600" font-size="10" fill="#745845">INVERSIÓN</text>
+    <text x="24" y="375" font-family="sans-serif" font-weight="900" font-size="20" fill="#221a15">S/. 3,400.00</text>
+    
+    <rect x="225" y="345" width="96" height="36" rx="18" fill="#944b00"/>
+    <text x="273" y="367" font-family="sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Adquirir</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(805, 400)" filter="url(#cardShadow)">
+    <rect width="345" height="400" rx="28" fill="#ffffff" stroke="#f1e5df"/>
+    <rect width="345" height="210" rx="28" fill="#e3e7af"/>
+    <rect x="15" y="15" width="80" height="24" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="55" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#301400" text-anchor="middle">Dormitorio</text>
+    <rect x="235" y="15" width="95" height="24" rx="12" fill="#fef3c7"/>
+    <text x="282" y="31" font-family="sans-serif" font-weight="700" font-size="10" fill="#92400e" text-anchor="middle">⚠️ 3 en stock</text>
+    
+    <text x="24" y="250" font-family="serif" font-weight="700" font-size="18" fill="#221a15">Cama King Size Flotante</text>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" fill="#52443d">Estructura suspendida con iluminación integrada sutil...</text>
+    
+    <line x1="24" y1="330" x2="321" y2="330" stroke="#f1e5df" stroke-width="1"/>
+    <text x="24" y="352" font-family="sans-serif" font-weight="600" font-size="10" fill="#745845">INVERSIÓN</text>
+    <text x="24" y="375" font-family="sans-serif" font-weight="900" font-size="20" fill="#221a15">S/. 4,150.00</text>
+    
+    <rect x="225" y="345" width="96" height="36" rx="18" fill="#944b00"/>
+    <text x="273" y="367" font-family="sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">Adquirir</text>
+  </g>
+</svg>

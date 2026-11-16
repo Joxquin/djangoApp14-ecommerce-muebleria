@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="636" viewBox="0 0 900 636">
+      <defs>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#221a15" flood-opacity="0.12"/>
+        </filter>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffdcc3"/>
+          <stop offset="100%" stop-color="#fedcc6"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Base Canvas Background -->
+      <rect width="100%" height="100%" fill="#fff8f5" rx="28"/>
+
+      <!-- Window Container Card (M3 Expressive) -->
+      <g filter="url(#shadow)">
+        <rect x="25" y="25" width="850" height="586" rx="24" fill="#ffffff" stroke="#f1e5df" stroke-width="1.5"/>
+        
+        <!-- Window Top Bar -->
+        <rect x="25" y="25" width="850" height="58" rx="24" fill="url(#headerGrad)"/>
+        <rect x="25" y="60" width="850" height="23" fill="url(#headerGrad)"/>
+        
+        <!-- Window Dots -->
+        <circle cx="55" cy="54" r="6.5" fill="#ba1a1a"/>
+        <circle cx="75" cy="54" r="6.5" fill="#f59e0b"/>
+        <circle cx="95" cy="54" r="6.5" fill="#10b981"/>
+
+        <!-- Title & Path -->
+        <text x="125" y="58" fill="#301400" font-family="system-ui, sans-serif" font-weight="700" font-size="14">Ejercicio 04 - Serializadores y Endpoints REST</text>
+        <text x="460" y="58" fill="#745845" font-family="monospace" font-size="12">backend/catalogo/serializers.py y views.py</text>
+
+        <!-- Badge -->
+        <rect x="730" y="41" width="125" height="26" rx="13" fill="#944b00"/>
+        <text x="792" y="58" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">Django REST</text>
+      </g>
+
+      <!-- Code Line Output -->
+      <text x="45" y="100">
+        <tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 1</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"># Serializadores DRF</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 2</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">class CategoriaSerializer(serializers.ModelSerializer):</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 3</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    total_productos = serializers.IntegerField(source=&#x27;productos.count&#x27;, read_only=True)</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 4</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    class Meta:</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 5</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        model = Categoria</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 6</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        fields = [&#x27;id&#x27;, &#x27;nombre&#x27;, &#x27;descripcion&#x27;, &#x27;total_productos&#x27;]</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 7</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"></tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 8</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">class ProductoSerializer(serializers.ModelSerializer):</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 9</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    categoria_nombre = serializers.ReadOnlyField(source=&#x27;categoria.nombre&#x27;)</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">10</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    class Meta:</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">11</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        model = Producto</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">12</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        fields = [&#x27;id&#x27;, &#x27;nombre&#x27;, &#x27;descripcion&#x27;, &#x27;precio&#x27;, &#x27;imagen&#x27;, &#x27;cantidad_disponible&#x27;, &#x27;categoria&#x27;, &#x27;categoria_nombre&#x27;]</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">13</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"></tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">14</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"># ViewSets con filtrado por categoría</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">15</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">class ProductoViewSet(viewsets.ReadOnlyModelViewSet):</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">16</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    serializer_class = ProductoSerializer</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">17</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    def get_queryset(self):</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">18</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        queryset = Producto.objects.select_related(&#x27;categoria&#x27;).all()</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">19</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        categoria_id = self.request.query_params.get(&#x27;categoria&#x27;, None)</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">20</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        if categoria_id is not None:</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">21</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">            queryset = queryset.filter(categoria_id=categoria_id)</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">22</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">        return queryset</tspan>
+      </text>
+    </svg>

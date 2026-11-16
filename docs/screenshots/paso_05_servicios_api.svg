@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="590" viewBox="0 0 900 590">
+      <defs>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#221a15" flood-opacity="0.12"/>
+        </filter>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffdcc3"/>
+          <stop offset="100%" stop-color="#fedcc6"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Base Canvas Background -->
+      <rect width="100%" height="100%" fill="#fff8f5" rx="28"/>
+
+      <!-- Window Container Card (M3 Expressive) -->
+      <g filter="url(#shadow)">
+        <rect x="25" y="25" width="850" height="540" rx="24" fill="#ffffff" stroke="#f1e5df" stroke-width="1.5"/>
+        
+        <!-- Window Top Bar -->
+        <rect x="25" y="25" width="850" height="58" rx="24" fill="url(#headerGrad)"/>
+        <rect x="25" y="60" width="850" height="23" fill="url(#headerGrad)"/>
+        
+        <!-- Window Dots -->
+        <circle cx="55" cy="54" r="6.5" fill="#ba1a1a"/>
+        <circle cx="75" cy="54" r="6.5" fill="#f59e0b"/>
+        <circle cx="95" cy="54" r="6.5" fill="#10b981"/>
+
+        <!-- Title & Path -->
+        <text x="125" y="58" fill="#301400" font-family="system-ui, sans-serif" font-weight="700" font-size="14">Ejercicio 05 - Servicios Fetch API Frontend</text>
+        <text x="460" y="58" fill="#745845" font-family="monospace" font-size="12">frontend/src/services/api.js</text>
+
+        <!-- Badge -->
+        <rect x="730" y="41" width="125" height="26" rx="13" fill="#944b00"/>
+        <text x="792" y="58" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="600" font-size="11" text-anchor="middle">React Fetch</text>
+      </g>
+
+      <!-- Code Line Output -->
+      <text x="45" y="100">
+        <tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 1</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">const API_BASE_URL = &#x27;http://localhost:8000/api&#x27;;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 2</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"></tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 3</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">export async function getCategorias() {</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 4</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  const response = await fetch(`${API_BASE_URL}/categorias/`, {</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 5</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    headers: { &#x27;Accept&#x27;: &#x27;application/json&#x27; }</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 6</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  });</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 7</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  if (!response.ok) throw new Error(&#x27;Error al cargar categorías&#x27;);</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 8</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  return await response.json();</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace"> 9</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">}</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">10</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace"></tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">11</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">export async function getProductos(categoriaId = null) {</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">12</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  const url = categoriaId </tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">13</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    ? `${API_BASE_URL}/productos/?categoria=${categoriaId}`</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">14</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    : `${API_BASE_URL}/productos/`;</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">15</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  const response = await fetch(url, {</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">16</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">    headers: { &#x27;Accept&#x27;: &#x27;application/json&#x27; }</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">17</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  });</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">18</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  if (!response.ok) throw new Error(&#x27;Error al cargar productos&#x27;);</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">19</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">  return await response.json();</tspan><tspan x="45" dy="22" fill="#745845" font-size="12" font-family="monospace">20</tspan><tspan x="85" fill="#221a15" font-size="13" font-family="monospace">}</tspan>
+      </text>
+    </svg>
